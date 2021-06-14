@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/watchlistFragment"
+        android:icon="@drawable/ic_menu_watchlist"
+        android:title="@string/watchlist"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/streamFragment"
+        android:icon="@drawable/ic_menu_stream"
+        android:title="@string/stream"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/searchFragment"
+        android:icon="@drawable/ic_menu_search"
+        android:title="@string/search"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/chatFragment"
+        android:icon="@drawable/ic_menu_chat"
+        android:title="@string/chat"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/portfolioFragment"
+        android:icon="@drawable/ic_menu_portfolio"
+        android:title="@string/portfolio"
+        app:showAsAction="ifRoom" />
+
+</menu>

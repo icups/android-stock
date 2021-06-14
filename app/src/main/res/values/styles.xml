@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/colorWhite</item>
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:fontFamily">@font/proxima_nova</item>
+        <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="AppTheme.Full.StatusBar" parent="AppTheme">
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+    </style>
+
+    <style name="AppTheme.Light" parent="AppTheme">
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <!-- Launcher -->
+    <style name="AppTheme.Launcher" parent="AppTheme">
+        <item name="android:windowBackground">@drawable/bg_splash_screen</item>
+    </style>
+
+    <!-- Toolbar -->
+    <style name="AppTheme.Toolbar" parent="Theme.AppCompat">
+        <item name="actionMenuTextColor">@color/colorWhite</item>
+
+        <item name="android:textColorPrimary">@color/colorWhite</item>
+        <item name="android:textColorSecondary">@color/colorWhite</item>
+    </style>
+
+    <!-- No Action Bar -->
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="android:windowActivityTransitions">true</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Transparent Status Bar -->
+    <style name="AppTheme.Transparent.StatusBar" parent="AppTheme">
+        <item name="android:statusBarColor">@color/colorTransparent</item>
+        <item name="android:navigationBarColor">@color/colorTransparent</item>
+
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!-- Button -->
+    <style name="AppTheme.Button" parent="Widget.AppCompat.Button">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!-- Card View -->
+    <style name="AppTheme.MaterialCard" parent="Theme.MaterialComponents.Light">
+        <item name="android:colorControlHighlight">@color/colorPrimary</item>
+    </style>
+
+    <!-- Tab Layout -->
+    <style name="AppTheme.TabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">@color/colorOrange</item>
+        <item name="tabSelectedTextColor">@color/colorOrange</item>
+        <item name="tabTextColor">#cccccc</item>
+        <item name="tabTextAppearance">@style/TabLayoutTextAppearance</item>
+    </style>
+
+    <!-- Tab Layout Text Appearance -->
+    <style name="TabLayoutTextAppearance">
+        <item name="android:fontFamily">@font/proxima_nova_bold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <!-- Alert Dialog -->
+    <style name="AppTheme.Alert.Dialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <!-- Pop Up Dialog -->
+    <style name="AppTheme.Dialog" parent="Base.Theme.AppCompat.Light.Dialog.FixedSize">
+        <item name="android:windowBackground">@color/colorTransparent</item>
+        <item name="android:windowActionBar">false</item>
+
+        <item name="android:fontFamily">@font/proxima_nova</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <!-- Bottom Sheet -->
+    <style name="AppTheme.Sheet" parent="Base.Theme.AppCompat.Dialog">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+
+        <item name="android:windowAnimationStyle">@style/SlideAnimation</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+
+        <item name="android:statusBarColor">@color/colorTransparent</item>
+        <item name="android:windowBackground">@color/colorTransparent</item>
+        <item name="android:background">@color/colorTransparent</item>
+
+        <item name="android:fontFamily">@font/proxima_nova</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <!-- Text Input -->
+    <style name="AppTheme.Input.Auth" parent="Widget.AppCompat.EditText">
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="AppTheme.Input.Phone" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@color/colorTransparent</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textColorHint">@color/colorGray</item>
+
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:imeOptions">actionSend</item>
+        <item name="android:inputType">phone</item>
+        <item name="android:maxLength">16</item>
+        <item name="android:digits">0123456789</item>
+    </style>
+
+    <style name="AppTheme.Input.OTP" parent="Widget.AppCompat.TextView">
+        <item name="android:clickable">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/proxima_nova</item>
+        <item name="android:background">@drawable/bg_light_gray_rounded_8</item>
+        <item name="android:padding">8dp</item>
+        <item name="autoSizeTextType">uniform</item>
+    </style>
+
+    <style name="AppTheme.Input.Pin" parent="Widget.AppCompat.EditText">
+        <item name="android:clickable">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:inputType">numberPassword</item>
+        <item name="android:cursorVisible">false</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">40sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:background">@drawable/bg_white_rounded_8</item>
+    </style>
+
+    <style name="AppTheme.NumPad" parent="Widget.AppCompat.TextView">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="AppTheme.FormData.Input" parent="Widget.AppCompat.EditText">
+        <item name="android:background">@color/colorTransparent</item>
+        <item name="android:lines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:textColorHint">@color/colorGray</item>
+    </style>
+
+    <style name="TextInputAppearance">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorGray</item>
+        <item name="android:fontFamily">@font/proxima_nova</item>
+    </style>
+
+    <!-- Item Clickable -->
+    <style name="CircularItemClickable">
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="ItemClickable">
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:focusable">true</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <!-- Pop Up Animation Style -->
+    <style name="FadeAnimation">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="SlideAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+</resources>

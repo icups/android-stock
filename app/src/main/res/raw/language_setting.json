@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "code": "id",
+    "label": "Bahasa Indonesia",
+    "default": false
+  },
+  {
+    "id": 2,
+    "code": "en",
+    "label": "English",
+    "default": true
+  }
+]

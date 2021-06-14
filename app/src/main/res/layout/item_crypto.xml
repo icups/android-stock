@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="item"
+            type="id.stockbit.model.Crypto" />
+
+        <variable
+            name="currency"
+            type="id.stockbit.model.Currency" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:theme="@style/AppTheme.Light">
+
+        <View
+            android:id="@+id/view_separator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:alpha="0.5"
+            android:background="@color/colorLightGray"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:text="@{item.name}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="AALI" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@{item.fullName}"
+            android:textColor="@color/colorGray"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/text_name"
+            app:layout_constraintTop_toBottomOf="@id/text_name"
+            tools:text="Astra Agro Lestari Tbk." />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/proxima_nova_bold"
+            android:text="@{currency.price}"
+            android:visibility="@{currency == null ? View.INVISIBLE : View.VISIBLE, default=`invisible`}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="$ 9.513.98"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="@{currency.formattedChangeHour() + ` (` + currency.formattedPctHour() + `%)`}"
+            android:textColor="@color/colorGray"
+            android:textSize="12sp"
+            android:visibility="@{currency == null ? View.INVISIBLE : View.VISIBLE, default=`invisible`}"
+            app:changePercentageColor="@{currency.formattedChangeHour()}"
+            app:layout_constraintEnd_toEndOf="@id/text_price"
+            app:layout_constraintTop_toBottomOf="@id/text_price"
+            tools:text="+200 (+2.26%)"
+            tools:textColor="@color/colorGreen"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

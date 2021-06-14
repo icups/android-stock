@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/graph_main"
+    app:startDestination="@id/watchlistFragment">
+
+    <fragment
+        android:id="@+id/watchlistFragment"
+        android:name="id.stockbit.app.ui.main.menu.WatchlistFragment"
+        android:label="Watchlist"
+        tools:layout="@layout/fragment_watchlist" />
+
+    <fragment
+        android:id="@+id/streamFragment"
+        android:name="id.stockbit.app.ui.main.menu.StreamFragment"
+        android:label="Stream"
+        tools:layout="@layout/fragment_stream" />
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="id.stockbit.app.ui.main.menu.SearchFragment"
+        android:label="Search"
+        tools:layout="@layout/fragment_search" />
+
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="id.stockbit.app.ui.main.menu.ChatFragment"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat" />
+
+    <fragment
+        android:id="@+id/portfolioFragment"
+        android:name="id.stockbit.app.ui.main.menu.PortfolioFragment"
+        android:label="Portfolio"
+        tools:layout="@layout/fragment_portfolio" />
+
+    <action
+        android:id="@+id/startWatchlistFragment"
+        app:destination="@id/watchlistFragment"
+        app:enterAnim="@anim/slide_in_right" />
+
+</navigation>
